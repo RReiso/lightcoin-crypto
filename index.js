@@ -2,7 +2,7 @@ class Account {
   constructor(username) {
     this.username = username;
     this.transactions = [];
-    this.balance = 0;
+    this.balance = 0; // call to setter method
   }
 
   get balance() {
@@ -17,7 +17,7 @@ class Account {
     const amount = transaction.value;
     if (this.balance + amount >= 0) {
       this.transactions.push(transaction);
-      this.balance += amount;
+      this.balance += amount; //(this.balance = (this.balance(call to getter) + amount) - call to setter
     } else {
       console.log("Insufficient funds");
     }
